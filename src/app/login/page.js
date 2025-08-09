@@ -11,7 +11,7 @@ export default function LoginPage() {
       </Head>
 
       {/* Navigation */}
-      <nav className="flex justify-between items-center p-6 container mx-auto backdrop-blur-sm bg-white/70 rounded-lg mt-4 shadow-lg sticky top-4 z-50">
+      <nav className="flex justify-between items-center mb-10 p-6 container mx-auto backdrop-blur-sm bg-white/70 rounded-lg shadow-lg sticky top-4 z-50">
         <Link href="/" className="text-3xl font-bold text-[#004D40] flex items-center">
           <span className="bg-gradient-to-r from-[#004D40] to-[#F4A261] bg-clip-text text-transparent">AI</span>
           <span className="ml-1">ResumeBuilder</span>
@@ -23,7 +23,7 @@ export default function LoginPage() {
         </div>
       </nav>
 
-      <main className="container mx-auto px-6 flex items-center justify-center min-h-[calc(100vh-120px)]">
+      <main className="container mx-auto px-6 flex items-center justify-center min-h-[calc(100vh-140px)]">
         <div className="w-full max-w-md">
           {/* Login Card */}
           <div className="bg-white rounded-3xl shadow-2xl p-8 backdrop-blur-sm border border-gray-100">

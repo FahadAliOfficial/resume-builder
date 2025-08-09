@@ -11,7 +11,7 @@ export default function DashboardPage() {
       </Head>
 
       {/* Navigation */}
-      <nav className="flex justify-between items-center p-6 container mx-auto backdrop-blur-sm bg-white/70 rounded-lg mt-4 shadow-lg sticky top-4 z-50">
+      <nav className="flex justify-between items-center p-6 container mx-auto backdrop-blur-sm bg-white/70 rounded-lg shadow-lg sticky top-4 z-50">
         <Link href="/dashboard" className="text-3xl font-bold text-[#004D40] flex items-center">
           <span className="bg-gradient-to-r from-[#004D40] to-[#F4A261] bg-clip-text text-transparent">AI</span>
           <span className="ml-1">ResumeBuilder</span>

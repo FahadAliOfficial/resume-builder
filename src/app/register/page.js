@@ -11,7 +11,7 @@ export default function RegisterPage() {
       </Head>
 
       {/* Navigation */}
-      <nav className="flex justify-between items-center p-6 container mx-auto backdrop-blur-sm bg-white/70 rounded-lg mt-4 shadow-lg sticky top-4 z-50">
+      <nav className="flex justify-between items-center p-6 container mx-auto backdrop-blur-sm bg-white/70 rounded-lg shadow-lg sticky top-4 z-50">
         <Link href="/" className="text-3xl font-bold text-[#004D40] flex items-center">
           <span className="bg-gradient-to-r from-[#004D40] to-[#F4A261] bg-clip-text text-transparent">AI</span>
           <span className="ml-1">ResumeBuilder</span>
@@ -23,14 +23,14 @@ export default function RegisterPage() {
         </div>
       </nav>
 
-      <main className="container mx-auto px-6 flex items-center justify-center min-h-[calc(100vh-120px)] py-8">
+      <main className="container mx-auto px-6 flex items-center justify-center min-h-[calc(100vh-140px)] py-8">
         <div className="w-full max-w-md">
           {/* Register Card */}
           <div className="bg-white rounded-3xl shadow-2xl p-8 backdrop-blur-sm border border-gray-100">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center bg-gradient-to-r from-[#004D40]/10 to-[#F4A261]/10 px-4 py-2 rounded-full mb-4 border border-[#004D40]/20">
+              {/* <div className="inline-flex items-center bg-gradient-to-r from-[#004D40]/10 to-[#F4A261]/10 px-4 py-2 rounded-full mb-4 border border-[#004D40]/20">
                 <span className="text-sm font-semibold text-[#004D40]">🚀 Start Your Journey</span>
-              </div>
+              </div> */}
               <h1 className="text-3xl font-bold text-[#004D40] mb-2">Create Your Account</h1>
               <p className="text-[#7F8C8D]">Join thousands who landed their dream jobs</p>
             </div>
