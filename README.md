@@ -205,6 +205,6 @@ Before announcing publicly, verify the following:
 
 ## License
 
-No license file is currently included.
+MIT License
 
-If you plan to open source this project, add a `LICENSE` file (for example MIT) before public release.
+Copyright (c) 2025 Fahad Ali
