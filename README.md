@@ -1,36 +1,210 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Resume Builder
+
+A modern resume building web app with a polished multi-page experience for:
+
+- marketing and onboarding users,
+- selecting ATS-friendly templates,
+- drafting resume content with an AI-assistant workflow,
+- previewing and exporting resumes.
+
+Built with Next.js App Router, React 19, and Tailwind CSS v4.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Current Status](#current-status)
+- [Key Features](#key-features)
+- [Tech Stack](#tech-stack)
+- [Project Structure](#project-structure)
+- [App Routes](#app-routes)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+- [Deployment](#deployment)
+- [Go-Live Checklist](#go-live-checklist)
+- [Known Limitations](#known-limitations)
+- [Roadmap](#roadmap)
+- [License](#license)
+
+## Overview
+
+AI Resume Builder is designed to help users create job-ready resumes with a guided, friendly UI. The product flow includes:
+
+1. Landing page and value proposition
+2. Authentication pages (login/register UI)
+3. Onboarding form for profile details
+4. Template browsing
+5. Resume builder workspace with AI assistant panel and live preview
+6. User dashboard for managing resumes
+
+## Current Status
+
+This repository is currently a frontend MVP/prototype.
+
+- Core pages and navigation are implemented.
+- UI is responsive and styled with Tailwind CSS.
+- Data shown in dashboard, templates, and builder is currently static/mock.
+- Authentication, database persistence, and AI API integration are not yet wired in.
+
+This makes it suitable for a public UI demo and iterative product launch.
+
+## Key Features
+
+- Marketing landing page with feature highlights and conversion CTAs
+- Registration and login interfaces
+- Multi-step onboarding UI for profile capture
+- Dashboard with quick actions and resume cards
+- Template gallery with multiple visual styles and filtering controls
+- Resume builder workspace:
+	- AI chat-style assistant panel
+	- job description input area
+	- live resume preview panel
+	- export/download action placeholders
+
+## Tech Stack
+
+| Layer | Technology |
+| --- | --- |
+| Framework | Next.js 15 (App Router) |
+| UI Library | React 19 |
+| Styling | Tailwind CSS v4 |
+| Linting | ESLint 9 + eslint-config-next |
+| Language | JavaScript (ES Modules) |
+
+## Project Structure
+
+```text
+resume-builder/
+	public/
+	src/
+		app/
+			builder/
+				page.js
+			dashboard/
+				page.js
+			login/
+				page.js
+			onboarding/
+				page.js
+			register/
+				page.js
+			templates/
+				page.js
+			globals.css
+			layout.js
+			page.js
+	eslint.config.mjs
+	jsconfig.json
+	next.config.mjs
+	postcss.config.mjs
+	package.json
+	README.md
+```
+
+## App Routes
+
+| Route | Purpose | Status |
+| --- | --- | --- |
+| `/` | Landing page and product marketing | Implemented |
+| `/register` | User sign-up interface | Implemented (UI only) |
+| `/login` | User sign-in interface | Implemented (UI only) |
+| `/onboarding` | Profile setup form | Implemented (UI only) |
+| `/dashboard` | Resume management dashboard | Implemented (static data) |
+| `/templates` | Template browsing and selection | Implemented (static data) |
+| `/builder` | AI-assisted resume editing workspace | Implemented (static data) |
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18.18+ (Node.js 20 LTS recommended)
+- npm 9+
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run in Development
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000` in your browser.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Note for some Windows PowerShell setups: if script execution is restricted, use:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm.cmd run dev
+```
 
-## Learn More
+## Available Scripts
 
-To learn more about Next.js, take a look at the following resources:
+| Command | What it does |
+| --- | --- |
+| `npm run dev` | Starts local development server |
+| `npm run build` | Builds optimized production bundle |
+| `npm run start` | Starts production server after build |
+| `npm run lint` | Runs ESLint checks |
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Option 1: Deploy to Vercel (Recommended)
 
-## Deploy on Vercel
+1. Push this project to GitHub.
+2. Go to Vercel and import the repository.
+3. Keep defaults for a Next.js project.
+4. Click Deploy.
+5. Add your custom domain in Vercel project settings.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Vercel handles build, hosting, HTTPS, and CDN by default.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Option 2: Self-Hosted Node Server
+
+Build and run production locally or on a VM:
+
+```bash
+npm run build
+npm run start
+```
+
+The app will run in production mode on port 3000 by default.
+
+## Go-Live Checklist
+
+Before announcing publicly, verify the following:
+
+- Update global metadata title/description for SEO in `src/app/layout.js`
+- Replace placeholder/mock content with real user data sources
+- Wire authentication flows for register/login/logout
+- Connect onboarding form submissions to backend storage
+- Implement AI content generation backend integration
+- Implement actual PDF/DOC export pipeline
+- Add error states, loading states, and form validation messages
+- Add privacy policy and terms pages linked from auth screens
+- Add analytics and monitoring (for example: Vercel Analytics, Sentry)
+- Run lint and production build successfully
+
+## Known Limitations
+
+- No backend/API integration in this snapshot
+- No persistent user/session data
+- No real AI API calls yet
+- No complete export implementation yet
+
+## Roadmap
+
+- Integrate authentication provider (NextAuth or custom auth)
+- Add database models for users, resumes, and templates
+- Add AI provider integration for content generation and resume optimization
+- Add autosave and version history for resumes
+- Add complete export support (PDF/DOCX)
+- Add profile and settings pages referenced by dashboard navigation
+- Add test coverage (unit and end-to-end)
+
+## License
+
+No license file is currently included.
+
+If you plan to open source this project, add a `LICENSE` file (for example MIT) before public release.
